@@ -1,0 +1,169 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+  height: 100%; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1d1d1f; 
+}
+
+/* Establece el estilo para el contenedor principal de la aplicación */
+.app {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: stretch; 
+}
+
+.navbar {
+  background-color: #ff2f5a; 
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1; 
+  padding: 24px; 
+  max-width: 1200px;
+  margin: 40px auto; 
+  width: 100%; 
+}
+
+.song-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+  gap: 24px; 
+}
+
+.song-list-item {
+  border: none;
+  background: #ffffff;
+  border-radius: 8px; 
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.song-list-item:hover {
+  transform: scale(1.025); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.song-list-item img {
+  width: 100%;
+  height: auto; 
+  border-radius: 8px 8px 0 0; 
+}
+
+.song-list-item .song-info {
+  padding: 16px; 
+}
+
+.song-info h3 {
+  margin: 0;
+  margin-bottom: 8px; 
+  font-size: 1rem; 
+  color: #1d1d1f;
+}
+
+.song-info p {
+  margin: 0;
+  font-size: .9rem; 
+  color: #6e6e73; 
+}
+
+#player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.07); 
+  padding: 16px 24px; 
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; 
+}
+
+.search-box {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 28px; 
+  width: 100%;
+  max-width: 480px; 
+  background-color: #f2f2f7; 
+  margin-right: 12px; 
+}
+
+.search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ff2f5a; 
+  border-radius: 28px; 
+  background-color: #ff2f5a; 
+  color: white;
+  cursor: pointer;
+  font-weight: bold; 
+}
+
+.search-btn:active {
+  background-color: #e8264f; 
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px; 
+  background-color: #fdd; 
+}
+
+.app.light {
+  background: #fff;
+  color: #333;
+}
+
+.app.light .navbar {
+  background-color: #f9f9f9;
+}
+
+.app.dark {
+  background: #181818;
+  color: #fff;
+}
+
+.app.dark .navbar {
+  background-color: #282828;
+}
+
+.theme-toggle-btn {
+  padding: 5px 10px;
+  margin-left: 20px;
+  background: #606060;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  background: #808080;
+}
